@@ -1,0 +1,43 @@
+syntax = "proto3";
+package bigtable;
+
+service BigTable {
+	rpc PUT(Value) returns(Empty) {}
+	rpc GET(Position) returns(Value) {}
+	rpc CPUT(Update) returns(Empty) {}
+	rpc DELETE(Position) returns(Empty) {} 
+	rpc Find(Position) returns(stream Response) {}
+	rpc ReadLog(Response) returns(stream Value) {}
+	rpc Check(Empty) returns(Empty) {}
+	rpc PutFromReplica(Value) returns(Empty) {}
+	rpc Update_Primary(Position) returns(Empty) {}
+	rpc Update_Sever_Down_Status(Response) returns(Empty) {}
+	rpc Update_Sever_Up_Status(Response) returns(Empty) {}
+	rpc Terminate(Empty) returns(Empty) {}
+	rpc GetIpList(Empty) returns(stream Response) {}
+	rpc GetDataList(Empty) returns(stream Response) {}
+	
+}
+
+message Position {
+	string row = 1;
+	string col = 2;
+}
+
+message Value {
+	Position pos = 1;
+	bytes val = 2; 
+}
+
+message Update {
+	Value new_val = 1;
+	bytes old_val = 2;
+}
+
+message Response{
+	string msg = 1;
+}
+
+message Empty {
+	
+}

@@ -1,0 +1,6 @@
+server10_checkingpoint_1.txt,5,201,xuyimeng,email:receive
+server10_checkingpoint_5.txt,3,4,xuyimeng,email:receive:sender=xuyimeng&receiver=xuyimeng@bigtable.com,xuyimeng@seas.upenn.edu&subject=hihi&time=2017-05-06.21:58:34
+server10_checkingpoint_3.txt,5,191,xuyimeng,email:send
+server10_checkingpoint_6.txt,2,5,xuyimeng,email:send:sender=xuyimeng&receiver=xuyimeng@bigtable.com&subject=re:hihi&time=2017-05-06.21:58:49
+server10_checkingpoint_4.txt,4,4,xuyimeng,email:send:sender=xuyimeng&receiver=xuyimeng@bigtable.com,xuyimeng@seas.upenn.edu&subject=hihi&time=2017-05-06.21:58:34
+server10_checkingpoint_2.txt,6,3,xuyimeng,password

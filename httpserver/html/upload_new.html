@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>    
+<script>
+$(function()
+{
+    // Variable to store your files
+    var files;
+
+    // Add events
+    $('input[type=file]').on('change', prepareUpload);
+    $('form').on('submit', uploadFiles);
+
+    // Grab the files and set them to our variable
+    function prepareUpload(event)
+    {
+        // files = event.target.files;
+    }
+
+    // Catch the form submit and upload the files
+    function uploadFiles(event)
+    {
+        var url = "get_data.php";
+        var params = "lorem=ipsum&name=binny";
+        http.open("POST", url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader("Content-length", params.length);
+        http.setRequestHeader("Connection", "close");
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+            }
+        }
+        http.send(params);
+    }
+}
+
+});
+</script>
+</head>
+
+<h1>jQuery Uploads</h1>
+
+<form action="upload_file" enctype="multipart/form-data" method="post">
+    <ul>
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" multiple>
+        </li>
+
+        <li>
+            <label for="file_upload">File:</label>
+            <input type="file" name="file_upload" id="file_upload" multiple>
+        </li>
+
+        <li><input class="button green" type="submit" name="submit" value="Submit Content&"></li>
+    </ul>
+</form>
+
+
+</body>
+</html>
+

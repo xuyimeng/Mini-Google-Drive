@@ -1,0 +1,10 @@
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/rebuild_cache.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/httpServer.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/edit_cache.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/bigtable_server.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/bigtable_client.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/master_server.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/httpServer_automoc.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/bigtable_server_automoc.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/bigtable_client_automoc.dir
+/Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/master_server_automoc.dir

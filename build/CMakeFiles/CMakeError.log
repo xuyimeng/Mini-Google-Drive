@@ -1,0 +1,56 @@
+Performing C SOURCE FILE Test ns_initparse_works_none failed with the following output:
+Change Dir: /Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ba046/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_ba046.dir/build.make CMakeFiles/cmTC_ba046.dir/build
+Building C object CMakeFiles/cmTC_ba046.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -Dns_initparse_works_none   -o CMakeFiles/cmTC_ba046.dir/src.c.o   -c /Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ba046
+/usr/local/Cellar/cmake/3.5.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba046.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Dns_initparse_works_none -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_ba046.dir/src.c.o  -o cmTC_ba046  
+Undefined symbols for architecture x86_64:
+  "_res_9_ns_initparse", referenced from:
+      _main in src.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_ba046] Error 1
+make: *** [cmTC_ba046/fast] Error 2
+
+Source file was:
+
+        #include <arpa/nameser.h>
+        int main() {
+            ns_initparse(0, 0, 0);
+            return 0;
+        }
+
+Performing C SOURCE FILE Test res_mkquery_works_none failed with the following output:
+Change Dir: /Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93e0a/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_93e0a.dir/build.make CMakeFiles/cmTC_93e0a.dir/build
+Building C object CMakeFiles/cmTC_93e0a.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -Dres_mkquery_works_none   -o CMakeFiles/cmTC_93e0a.dir/src.c.o   -c /Users/yimengxu/Desktop/courses/cis505/monday/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_93e0a
+/usr/local/Cellar/cmake/3.5.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93e0a.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Dres_mkquery_works_none -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_93e0a.dir/src.c.o  -o cmTC_93e0a  
+Undefined symbols for architecture x86_64:
+  "_res_9_mkquery", referenced from:
+      _main in src.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_93e0a] Error 1
+make: *** [cmTC_93e0a/fast] Error 2
+
+Source file was:
+
+        #include <sys/types.h>
+        #include <sys/socket.h>
+        #include <netinet/in.h>
+        #include <arpa/nameser.h>
+        #include <resolv.h>
+        int main() {
+            int (*p)() = res_mkquery;
+            return 0;
+        }
+
